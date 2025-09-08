@@ -14,10 +14,14 @@ public class App {
         // create entity object
         Student student = new Student("Bob", "Bob421@gmail.com");
         Patient patient = new Patient("peter", "peter789@yahoo.in");
+        student.setId(12);
+        patient.setId(111);
+
+
 
         // save entity to DB (Hibernate returns generated primary key)
-        session.load(student.class,id);
-
+        session.merge(student);
+        session.update(patient);
         // commit transaction
         tx.commit();
 
