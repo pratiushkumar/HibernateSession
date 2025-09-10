@@ -14,6 +14,7 @@ public class App {
         // create entity object
         Student student = new Student("Bob", "Bob421@gmail.com");
         Patient patient = new Patient("peter", "peter789@yahoo.in");
+        Cars c1 = new Cars("Tesla", "Model S", 80000.0);
         student.setId(12);
         patient.setId(111);
 
@@ -22,6 +23,7 @@ public class App {
         // save entity to DB (Hibernate returns generated primary key)
         session.merge(student);
         session.update(patient);
+        session.save(Cars);
         // commit transaction
         tx.commit();
 
@@ -29,5 +31,6 @@ public class App {
         session.close();
 
         System.out.println("Session saved all things been done ");
+        System.out.println("cars saved successfully");
     }
 }
