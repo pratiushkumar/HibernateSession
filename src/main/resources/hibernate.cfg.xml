@@ -28,5 +28,7 @@
         <!-- Entity class -->
         <mapping class="com.hiber.hiber_demo.Student"/>
         <mapping class="com.hiber.hiber_demo.Patient"/>
+        <mapping class="com.hiber.hiber_demo.Cars"/>
+
     </session-factory>
 </hibernate-configuration>
